@@ -20,6 +20,12 @@ form.addEventListener('submit', e => {
 
 $('.hide-comment').hide()
 
+$('.hide-comment').on('click', () => {
+  $('.comment-field').empty('')
+  $('.hide-comment').toggle()
+  $('.show-comment').toggle()
+})
+
 $('.show-comment').on('click', () => {
   $.ajax({
     url: 'https://sheet.best/api/sheets/34e1e916-ff17-44e7-87fa-4f7868c42d16',
@@ -55,10 +61,4 @@ $('.show-comment').on('click', () => {
       }
     }
   })
-})
-
-$('.hide-comment').on('click', () => {
-  $('.comment-field').empty('')
-  $('.hide-comment').toggle()
-  $('.show-comment').toggle()
 })
