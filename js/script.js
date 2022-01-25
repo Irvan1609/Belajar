@@ -58,7 +58,7 @@ $('.show-comment').on('click', () => {
 })
 
 $('.hide-comment').on('click', () => {
-  $('.comment-field').empty()
+  $('.comment-field').html('')
   $('.hide-comment').toggle()
   $('.show-comment').toggle()
 })
