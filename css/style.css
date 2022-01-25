@@ -1,0 +1,19 @@
+#jumbotron{
+  background-color: #0099ff;
+}
+
+#projects{
+  background-color: #0099ff;
+}
+
+img{
+  size: 10px;;
+}
+
+a{
+  text-decoration: none;
+}
+
+section{
+  padding-top: 6rem;
+}
