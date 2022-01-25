@@ -33,6 +33,7 @@ $('.show-comment').on('click', () => {
       } else {
         $('.show-comment').toggle()
         $('.hide-comment').toggle()
+        $('.comment-field').html('')
         $.each(result, (i, data) => {
           $('.comment-field').append(`
             <div class="row">
@@ -54,4 +55,10 @@ $('.show-comment').on('click', () => {
       }
     }
   })
+})
+
+$('.hide-comment').on('click', () => {
+  $('.comment-field').empty()
+  $('.hide-comment').toggle()
+  $('.show-comment').toggle()
 })
