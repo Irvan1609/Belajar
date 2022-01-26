@@ -1,0 +1,53 @@
+{
+  "projects": [
+    {
+      "category": "phone",
+      "name": "Projek Pertama",
+      "alias": "project1",
+      "desk": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, laudantium. Autem mollitia minus consequuntur aperiam ratione fuga eligendi alias facilis?",
+      "img": "1.jpg"
+    },
+    {
+      "category": "laptop",
+      "name": "Projek Kedua",
+      "alias": "project2",
+      "desk": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem dolor quis debitis enim illo quam quae minima vero?",
+      "img": "2.jpg"
+    },
+    {
+      "category": "laptop",
+      "name": "Projek Ketiga",
+      "alias": "project3",
+      "desk": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem dolor enim illo quam quae minima vero?",
+      "img": "3.jpg"
+    },
+    {
+      "category": "laptop",
+      "name": "Projek Keempat",
+      "alias": "project4",
+      "desk": "Lorem ipsum dolor amet consectetur adipisicing elit. Voluptatem dolor quis debitis enim illo quam quae minima vero?",
+      "img": "4.jpg"
+    },
+    {
+      "category": "monitor",
+      "name": "Projek Kelima",
+      "alias": "project5",
+      "desk": "Lorem ipsum dolor sit amet consectetur adipisicing dolor quis debitis enim illo quam quae minima vero?",
+      "img": "5.jpg"
+    },
+    {
+      "category": "laptop",
+      "name": "Projek Keenam",
+      "alias": "project6",
+      "desk": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam fugiat, eveniet nam libero quas ipsa adipisci. Libero delectus porro nobis possimus?",
+      "img": "6.jpg"
+    },
+    {
+      "category": "laptop",
+      "name": "Projek Ketujuh",
+      "alias": "project7",
+      "desk": "Lorem ipsum dolor sit amet consectetur adipisicing fugiat, eveniet nam libero quas ipsa debitis. Perferendis, adipisci. Libero delectus porro nobis possimus?",
+      "img": "7.jpg"
+    }
+  ]
+}

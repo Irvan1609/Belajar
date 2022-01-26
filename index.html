@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <!-- Required meta tags -->
+  <!--  xa meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -17,20 +17,22 @@
   <title>Portfolio</title>
 </head>
 
-<body id="home">
+<body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm">
     <div class="container">
-      <a class="navbar-brand" href="#">Andi Irvan</a>
+      <a class="navbar-brand" href="#">
+        <img src="img/profil.png" alt="" class="rounded-circle" width="30px"> Irvan1609
+      </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
         aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="collapse navbar-collapse fixednav" id="navbarNavAltMarkup">
         <div class="navbar-nav ms-auto">
-          <a class="nav-link active" href="#home">Home</a>
+          <a class="nav-link active" href="#jumbotron">Home</a>
           <a class="nav-link" href="#about">About Me</a>
-          <a class="nav-link" href="#projects">Projects</a>
-          <a class="nav-link" href="#contact">Contact Me</a>
+          <a class="nav-link" href="#projects">My Projects</a>
+          <a class="nav-link" href="#form-comment">Comment</a>
         </div>
       </div>
     </div>
@@ -79,80 +81,10 @@
     <div class="container">
       <div class="row text-center mb-3 text-white">
         <div class="col">
-          <h2>Projects</h2>
+          <h2>My Projects</h2>
         </div>
       </div>
-      <div class="row justify-content-center">
-        <div class="col-sm-4 mb-3">
-          <div class="card">
-            <img src="img/projects/1.jpg" class="card-img-top" alt="Project1">
-            <div class="card-body">
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                content.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-4 mb-3">
-          <div class="card">
-            <img src="img/projects/2.jpg" class="card-img-top" alt="Project2">
-            <div class="card-body">
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                content.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-4 mb-3">
-          <div class="card">
-            <img src="img/projects/3.jpg" class="card-img-top" alt="Project3">
-            <div class="card-body">
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                content.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-4 mb-3">
-          <div class="card">
-            <img src="img/projects/4.jpg" class="card-img-top" alt="Project4">
-            <div class="card-body">
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                content.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-4 mb-3">
-          <div class="card">
-            <img src="img/projects/5.jpg" class="card-img-top" alt="Project5">
-            <div class="card-body">
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                content.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-4 mb-3">
-          <div class="card">
-            <img src="img/projects/6.jpg" class="card-img-top" alt="Project6">
-            <div class="card-body">
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                content.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-4 mb-3">
-          <div class="card">
-            <img src="img/projects/7.jpg" class="card-img-top" alt="Project7">
-            <div class="card-body">
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                content.
-              </p>
-            </div>
-          </div>
-        </div>
+      <div class="row justify-content-center projects-field text-center">
       </div>
     </div>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
@@ -162,31 +94,31 @@
     </svg>
   </section>
 
-  <section id="contact">
+  <section id="form-comment">
     <div class="container">
       <div class="row">
         <div class="col text-center mb-3">
-          <h2>Contact Me</h2>
+          <h2>Komentar</h2>
         </div>
       </div>
       <div class="row justify-content-center">
         <div class="col-6">
-          <form name="form-contact">
-            <div class="alert alert-success alert-dismissible fade show d-none contact-alert" role="alert">
+          <form name="form-comment">
+            <div class="alert alert-success alert-dismissible fade show d-none comment-alert" role="alert">
               <strong>Terima Kasih!</strong> Pesan Anda telah terkirim
               <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
             <div class="mb-3">
               <label for="name" class="form-label">Nama</label>
-              <input type="text" class="form-control" id="name" name="name" required>
+              <input type="text" class="form-control" id="name" name="name" xa>
             </div>
             <div class="mb-3">
               <label for="email" class="form-label">Email</label>
-              <input type="email" class="form-control" id="email" name="email" required>
+              <input type="email" class="form-control" id="email" name="email" xa>
             </div>
             <div class="mb-3">
               <label for="message" class="form-label">Komentar</label>
-              <textarea class="form-control" id="message" rows="3" name="message" required></textarea>
+              <textarea class="form-control" id="message" rows="3" name="message" xa></textarea>
             </div>
             <button type="submit" class="btn btn-primary float-end btn-submit">Submit</button>
             <button class="btn btn-primary float-end d-none btn-loading" type="button" disabled>
@@ -198,7 +130,9 @@
       </div>
     </div>
   </section>
+
   <hr>
+
   <section id="comment">
     <div class="container">
       <div class="row text-center mb-3">
@@ -217,16 +151,18 @@
     </path>
   </svg>
   <footer class="text-center bg-dark text-white p-3">
-    <p>Created with <i class="bi bi-heart-fill"></i> by <a href="https://www.instagram.com/irvan1609/"
+    <p>Created with <i class="bi bi-heart-fill text-danger"></i> by <a href="https://www.instagram.com/irvan1609/"
         class="text-white fw-bold ">Andi Irvan</a></p>
   </footer>
 
+  <!-- Bootstrap -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
     crossorigin="anonymous"></script>
   <!-- Jquery -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="js/func.js"></script>
   <script src="js/script.js"></script>
 
 </body>
