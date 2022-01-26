@@ -1,0 +1,15 @@
+{
+    "name": "irvan/belajar",
+    "autoload": {
+        "psr-4": {
+            "Irvan\\Belajar\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Andi Irvan",
+            "email": "andyirvan1609@gmail.com"
+        }
+    ],
+    "require": {}
+}
