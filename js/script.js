@@ -61,19 +61,19 @@ $('.hide-comment').on('click', () => {
 })
 
 // Munculkan Komentar
-$('.show-comment').on('click', () => {
-  $('.comment-field').empty('')
-  $('.hide-comment').toggle('d-none')
-  $('.show-comment').toggle('d-none')
-  $.getJSON(sheetAPI, result => {
-    if (result) {
-      showComment(result)
-    } else {
-      $.getJSON('data/comment.json', result => {
-        let comments = result.comments
-        showComment(comments)
-      })
-    }
-  })
+// $('.show-comment').on('click', () => {
+//   $('.comment-field').empty('')
+//   $('.hide-comment').toggle('d-none')
+//   $('.show-comment').toggle('d-none')
+//   $.getJSON(sheetAPI, result => {
+//     if (result) {
+//       showComment(result)
+//     } else {
+//       $.getJSON('data/comment.json', result => {
+//         let comments = result.comments
+//         showComment(comments)
+//       })
+//     }
+//   })
+// })
 
-})

@@ -1,3 +1,10 @@
+<?php include("config.php");
+$sql = $db->prepare("SELECT * FROM comments");
+$sql->execute();
+$res = $sql->fetchAll(PDO::FETCH_ASSOC);
+$res = json_encode($res);
+?>
+
 <!doctype html>
 <html lang="en">
 
@@ -7,8 +14,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <!-- Bootstrap Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
   <!-- MyStyle -->
@@ -23,8 +29,7 @@
       <a class="navbar-brand" href="#">
         <img src="img/profil.png" alt="" class="rounded-circle" width="30px"> Irvan1609
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse fixednav" id="navbarNavAltMarkup">
@@ -44,8 +49,7 @@
       <h1 class="fw-bold">Andi Irvan</h1>
       <p class="lead">Student | Web Dev</p>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path fill="#fff" fill-opacity="1"
-          d="M0,224L30,186.7C60,149,120,75,180,42.7C240,11,300,21,360,53.3C420,85,480,139,540,138.7C600,139,660,85,720,69.3C780,53,840,75,900,122.7C960,171,1020,245,1080,234.7C1140,224,1200,128,1260,112C1320,96,1380,160,1410,192L1440,224L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z">
+        <path fill="#fff" fill-opacity="1" d="M0,224L30,186.7C60,149,120,75,180,42.7C240,11,300,21,360,53.3C420,85,480,139,540,138.7C600,139,660,85,720,69.3C780,53,840,75,900,122.7C960,171,1020,245,1080,234.7C1140,224,1200,128,1260,112C1320,96,1380,160,1410,192L1440,224L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z">
         </path>
       </svg>
     </div>
@@ -71,8 +75,7 @@
       </div>
     </div>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-      <path fill="#0099ff" fill-opacity="1"
-        d="M0,128L30,149.3C60,171,120,213,180,218.7C240,224,300,192,360,181.3C420,171,480,181,540,160C600,139,660,85,720,74.7C780,64,840,96,900,128C960,160,1020,192,1080,208C1140,224,1200,224,1260,197.3C1320,171,1380,117,1410,90.7L1440,64L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z">
+      <path fill="#0099ff" fill-opacity="1" d="M0,128L30,149.3C60,171,120,213,180,218.7C240,224,300,192,360,181.3C420,171,480,181,540,160C600,139,660,85,720,74.7C780,64,840,96,900,128C960,160,1020,192,1080,208C1140,224,1200,224,1260,197.3C1320,171,1380,117,1410,90.7L1440,64L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z">
       </path>
     </svg>
   </section>
@@ -88,8 +91,7 @@
       </div>
     </div>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-      <path fill="#fff" fill-opacity="1"
-        d="M0,32L48,74.7C96,117,192,203,288,240C384,277,480,267,576,234.7C672,203,768,149,864,154.7C960,160,1056,224,1152,240C1248,256,1344,224,1392,208L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+      <path fill="#fff" fill-opacity="1" d="M0,32L48,74.7C96,117,192,203,288,240C384,277,480,267,576,234.7C672,203,768,149,864,154.7C960,160,1056,224,1152,240C1248,256,1344,224,1392,208L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
       </path>
     </svg>
   </section>
@@ -146,24 +148,27 @@
   </section>
 
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-    <path fill="#212529" fill-opacity="1"
-      d="M0,128L48,144C96,160,192,192,288,197.3C384,203,480,181,576,160C672,139,768,117,864,133.3C960,149,1056,203,1152,213.3C1248,224,1344,192,1392,176L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+    <path fill="#212529" fill-opacity="1" d="M0,128L48,144C96,160,192,192,288,197.3C384,203,480,181,576,160C672,139,768,117,864,133.3C960,149,1056,203,1152,213.3C1248,224,1344,192,1392,176L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
     </path>
   </svg>
   <footer class="text-center bg-dark text-white p-3">
-    <p>Created with <i class="bi bi-heart-fill text-danger"></i> by <a href="https://www.instagram.com/irvan1609/"
-        class="text-white fw-bold ">Andi Irvan</a></p>
+    <p>Created with <i class="bi bi-heart-fill text-danger"></i> by <a href="https://www.instagram.com/irvan1609/" class="text-white fw-bold ">Andi Irvan</a></p>
   </footer>
 
   <!-- Bootstrap -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
   <!-- Jquery -->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <script src="js/func.js"></script>
   <script src="js/script.js"></script>
+  <script type="text/javascript">
+    $('.show-comment').on('click', () => {
+      $('.comment-field').empty('');
+      $('.hide-comment').toggle('d-none');
+      $('.show-comment').toggle('d-none');
+      showComment(<?php echo $res ?>);
+    });
+  </script>
 
 </body>
 
