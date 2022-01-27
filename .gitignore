@@ -1,2 +1,4 @@
 /vendor/
 /node_modules/
+
+/psql --host=ec2-54-224-64-114.compute-1.amazonaws.com --port=5432 --username=qvabyltnyiheig --password=e041694084ec359ba53f404bdd6e6f94927b374f3a99c75c43c79ab1fc3c7acd --dbname=df811j2skqs79k/
