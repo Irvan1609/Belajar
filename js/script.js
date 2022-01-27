@@ -32,26 +32,24 @@ $('.fixednav div a').click(function () {
 });
 
 // Submit Komentar
-form.addEventListener('submit', e => {
-  e.preventDefault()
-  btnSubmit.classList.toggle('d-none')
-  btnLoading.classList.toggle('d-none')
+// form.addEventListener('submit', e => {
+//   e.preventDefault()
+//   btnSubmit.classList.toggle('d-none')
+//   btnLoading.classList.toggle('d-none')
 
-  let formVal = new FormData(form)
-  const comment = Object.fromEntries(formVal.entries());
-  console.log(comment)
+//   let formVal = new FormData(form)
+//   const comment = Object.fromEntries(formVal.entries());
+//   console.log(comment)
 
-  // fetch(dataSheet, { method: 'POST', body: formVal })
-  //   .then(response => {
-  //     btnSubmit.classList.toggle('d-none')
-  //     btnLoading.classList.toggle('d-none')
-  //     commentAlert.classList.toggle('d-none')
-  //     form.reset()
-  //   })
-  //   .catch(error => console.error('Error!', error.message))
-
-  db.data()
-})
+//   // fetch(dataSheet, { method: 'POST', body: formVal })
+//   //   .then(response => {
+//   //     btnSubmit.classList.toggle('d-none')
+//   //     btnLoading.classList.toggle('d-none')
+//   //     commentAlert.classList.toggle('d-none')
+//   //     form.reset()
+//   //   })
+//   //   .catch(error => console.error('Error!', error.message))
+// })
 
 // Tutup Komentar
 $('.hide-comment').on('click', () => {

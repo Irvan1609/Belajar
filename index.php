@@ -3,6 +3,7 @@ $sql = $db->prepare("SELECT * FROM comments");
 $sql->execute();
 $res = $sql->fetchAll(PDO::FETCH_ASSOC);
 $res = json_encode($res);
+var_dump($res);
 ?>
 
 <!doctype html>
@@ -105,7 +106,7 @@ $res = json_encode($res);
       </div>
       <div class="row justify-content-center">
         <div class="col-6">
-          <form name="form-comment">
+          <form action="upComment.php" method="POST" name="form-comment">
             <div class="alert alert-success alert-dismissible fade show d-none comment-alert" role="alert">
               <strong>Terima Kasih!</strong> Pesan Anda telah terkirim
               <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
@@ -122,7 +123,7 @@ $res = json_encode($res);
               <label for="message" class="form-label">Komentar</label>
               <textarea class="form-control" id="message" rows="3" name="message" xa></textarea>
             </div>
-            <button type="submit" class="btn btn-primary float-end btn-submit">Submit</button>
+            <button type="submit" class="btn btn-primary float-end btn-submit" name="submit" value="submit">Submit</button>
             <button class="btn btn-primary float-end d-none btn-loading" type="button" disabled>
               <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
               Loading...
